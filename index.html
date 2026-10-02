@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Youcanbuild — Jasa Pembuatan Website & Aplikasi</title>
+  <meta name="description" content="Youcanbuild membantu bisnis Anda memiliki website, aplikasi, dan sistem digital yang modern, cepat, dan sesuai kebutuhan." />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Topbar pengumuman ===== -->
+  <div class="topbar">
+    <div class="topbar__label"><strong>KONSULTASI GRATIS</strong> — ceritakan kebutuhan bisnis Anda</div>
+    <div class="topbar__marquee" aria-hidden="true">
+      <div class="topbar__track">
+        <span>Website Company Profile</span><span>Toko Online</span><span>Aplikasi Mobile</span><span>Sistem Custom & Dashboard</span><span>Landing Page</span><span>Otomatisasi Proses Bisnis</span>
+        <span>Website Company Profile</span><span>Toko Online</span><span>Aplikasi Mobile</span><span>Sistem Custom & Dashboard</span><span>Landing Page</span><span>Otomatisasi Proses Bisnis</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#beranda" class="navbar__logo" aria-label="Youcanbuild - Beranda">
+        <img src="assets/img/logo.png" alt="Youcanbuild" width="708" height="140" />
+      </a>
+
+      <nav class="navbar__menu" id="navMenu" aria-label="Menu utama">
+        <a href="#desain">Cari Desain</a>
+        <div class="navbar__dropdown">
+          <button type="button" class="navbar__dropdown-btn" aria-expanded="false">
+            Layanan
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="navbar__dropdown-panel">
+            <a href="#layanan">Website Company Profile</a>
+            <a href="#layanan">Website Toko Online</a>
+            <a href="#layanan">Aplikasi Mobile</a>
+            <a href="#layanan">Sistem Custom</a>
+          </div>
+        </div>
+        <a href="#alur">Alur Kerja</a>
+        <a href="#portofolio">Portofolio</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#artikel">Artikel</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--outline btn--sm js-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>
+          Konsultasi
+        </a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero slider ===== -->
+    <section class="hero" id="beranda">
+      <div class="slider" id="heroSlider" aria-roledescription="carousel" aria-label="Banner utama">
+        <div class="slider__track">
+          <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="1 dari 2">
+            <img src="assets/img/slide-1.jpg" alt="Bangun sistem yang bekerja untuk bisnis Anda" width="2170" height="725" draggable="false" />
+          </div>
+          <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="2 dari 2">
+            <img src="assets/img/slide-2.jpg" alt="Solusi digital untuk bisnis Anda dalam satu tempat" width="2151" height="731" loading="lazy" draggable="false" />
+          </div>
+        </div>
+
+        <button class="slider__arrow slider__arrow--prev" aria-label="Slide sebelumnya">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="slider__arrow slider__arrow--next" aria-label="Slide berikutnya">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <div class="container hero__bar">
+        <div class="slider__dots" id="heroDots"></div>
+        <span class="slider__count" id="heroCount">01 / 02</span>
+        <div class="hero__cta">
+          <a href="#layanan" class="btn btn--primary">Lihat Layanan <span class="btn__icon">→</span></a>
+          <a href="#" class="btn btn--outline js-wa">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 01 Koleksi Desain ===== -->
+    <section class="section" id="desain">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">01 · Koleksi Desain</span>
+            <h2 class="section__title">Pilihan <em class="mark">desain siap pakai</em> untuk semua jenis bisnis.</h2>
+          </div>
+          <p class="section__lead">Pilih kategori yang sesuai bisnis Anda. Setiap desain bisa disesuaikan dengan identitas brand dan tampil rapi di semua perangkat.</p>
+        </div>
+
+        <div class="chips" id="designFilter" role="tablist">
+          <button class="chip is-active" data-filter="all">Semua</button>
+          <button class="chip" data-filter="company">Company Profile</button>
+          <button class="chip" data-filter="toko">Toko Online</button>
+          <button class="chip" data-filter="landing">Landing Page</button>
+          <button class="chip" data-filter="aplikasi">Aplikasi</button>
+          <button class="chip" data-filter="sistem">Sistem / Dashboard</button>
+        </div>
+
+        <!-- Kartu desain: thumbnail diisi bertahap dari repositori desain -->
+        <div class="grid grid--3" id="designGrid">
+          <article class="card design" data-cat="company">
+            <div class="design__thumb"><span>Company Profile</span></div>
+            <div class="design__body">
+              <h3>Desain Company Profile</h3>
+              <p class="design__meta">Segera hadir</p>
+              <div class="design__actions">
+                <a href="#" class="btn btn--ghost btn--sm">Lihat</a>
+                <a href="#" class="btn btn--primary btn--sm js-wa">Konsultasi</a>
+              </div>
+            </div>
+          </article>
+          <article class="card design" data-cat="toko">
+            <div class="design__thumb"><span>Toko Online</span></div>
+            <div class="design__body">
+              <h3>Desain Toko Online</h3>
+              <p class="design__meta">Segera hadir</p>
+              <div class="design__actions">
+                <a href="#" class="btn btn--ghost btn--sm">Lihat</a>
+                <a href="#" class="btn btn--primary btn--sm js-wa">Konsultasi</a>
+              </div>
+            </div>
+          </article>
+          <article class="card design" data-cat="landing">
+            <div class="design__thumb"><span>Landing Page</span></div>
+            <div class="design__body">
+              <h3>Desain Landing Page</h3>
+              <p class="design__meta">Segera hadir</p>
+              <div class="design__actions">
+                <a href="#" class="btn btn--ghost btn--sm">Lihat</a>
+                <a href="#" class="btn btn--primary btn--sm js-wa">Konsultasi</a>
+              </div>
+            </div>
+          </article>
+          <article class="card design" data-cat="aplikasi">
+            <div class="design__thumb"><span>Aplikasi Mobile</span></div>
+            <div class="design__body">
+              <h3>Desain Aplikasi Mobile</h3>
+              <p class="design__meta">Segera hadir</p>
+              <div class="design__actions">
+                <a href="#" class="btn btn--ghost btn--sm">Lihat</a>
+                <a href="#" class="btn btn--primary btn--sm js-wa">Konsultasi</a>
+              </div>
+            </div>
+          </article>
+          <article class="card design" data-cat="sistem">
+            <div class="design__thumb"><span>Dashboard</span></div>
+            <div class="design__body">
+              <h3>Desain Sistem Dashboard</h3>
+              <p class="design__meta">Segera hadir</p>
+              <div class="design__actions">
+                <a href="#" class="btn btn--ghost btn--sm">Lihat</a>
+                <a href="#" class="btn btn--primary btn--sm js-wa">Konsultasi</a>
+              </div>
+            </div>
+          </article>
+          <article class="card design" data-cat="company">
+            <div class="design__thumb"><span>Company Profile</span></div>
+            <div class="design__body">
+              <h3>Desain Company Profile</h3>
+              <p class="design__meta">Segera hadir</p>
+              <div class="design__actions">
+                <a href="#" class="btn btn--ghost btn--sm">Lihat</a>
+                <a href="#" class="btn btn--primary btn--sm js-wa">Konsultasi</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="center">
+          <a href="#" class="btn btn--outline">Lihat Semua Desain <span class="btn__icon">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 Layanan ===== -->
+    <section class="section section--soft" id="layanan">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">02 · Layanan</span>
+            <h2 class="section__title">Pilih layanan <em class="mark">paling pas</em> untuk bisnismu.</h2>
+          </div>
+          <p class="section__lead">Setiap bisnis punya kebutuhan berbeda. Pilih layanan yang sesuai dengan tujuan dan skala bisnis Anda.</p>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="card service">
+            <div class="service__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+            </div>
+            <span class="service__tag">Untuk perusahaan & UMKM</span>
+            <h3>Website Company Profile</h3>
+            <p>Identitas digital profesional untuk membangun kepercayaan, lengkap dengan SEO dasar dan integrasi media sosial.</p>
+            <a href="#" class="service__link">Lihat Layanan <span>↗</span></a>
+          </article>
+          <article class="card service">
+            <div class="service__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L22 7H6"/></svg>
+            </div>
+            <span class="service__tag">Untuk pelaku usaha</span>
+            <h3>Website Toko Online</h3>
+            <p>Toko online lengkap dengan katalog produk, keranjang, pembayaran, dan manajemen pesanan yang mudah.</p>
+            <a href="#" class="service__link">Lihat Layanan <span>↗</span></a>
+          </article>
+          <article class="card service">
+            <div class="service__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+            </div>
+            <span class="service__tag">Untuk layanan digital</span>
+            <h3>Aplikasi Mobile</h3>
+            <p>Aplikasi Android & iOS yang cepat dan nyaman digunakan, terhubung langsung dengan sistem bisnis Anda.</p>
+            <a href="#" class="service__link">Lihat Layanan <span>↗</span></a>
+          </article>
+          <article class="card service">
+            <div class="service__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </div>
+            <span class="service__tag">Untuk kebutuhan khusus</span>
+            <h3>Sistem Custom</h3>
+            <p>Sistem 100% sesuai alur kerja Anda: dashboard, ERP, otomatisasi proses, hingga data terpusat.</p>
+            <a href="#" class="service__link">Lihat Layanan <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 03 Alur Kerja (pengganti paket harga) ===== -->
+    <section class="section" id="alur">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">03 · Alur Kerja</span>
+            <h2 class="section__title">Proses <em class="mark">jelas & transparan</em>, dari ide sampai online.</h2>
+          </div>
+          <p class="section__lead">Kami bekerja dengan alur yang terstruktur, sehingga Anda selalu tahu progres proyek di setiap tahap.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="card step">
+            <span class="step__num">01</span>
+            <div class="step__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+            </div>
+            <h3>Konsultasi</h3>
+            <p>Ceritakan kebutuhan dan tujuan bisnis Anda. Gratis, tanpa komitmen.</p>
+          </li>
+          <li class="card step">
+            <span class="step__num">02</span>
+            <div class="step__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6"/></svg>
+            </div>
+            <h3>Diskusi</h3>
+            <p>Kami susun konsep, fitur, dan alur yang paling sesuai bersama tim Anda.</p>
+          </li>
+          <li class="card step">
+            <span class="step__num">03</span>
+            <div class="step__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+            </div>
+            <h3>Penawaran Harga</h3>
+            <p>Penawaran yang rinci dan transparan sesuai ruang lingkup yang disepakati.</p>
+          </li>
+          <li class="card step">
+            <span class="step__num">04</span>
+            <div class="step__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>
+            </div>
+            <h3>Pengerjaan</h3>
+            <p>Desain & development dengan update progres rutin yang bisa Anda pantau.</p>
+          </li>
+          <li class="card step">
+            <span class="step__num">05</span>
+            <div class="step__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="m22 4-10 10-3-3"/></svg>
+            </div>
+            <h3>Finishing</h3>
+            <p>Uji coba, revisi, lalu website / aplikasi siap online dan diserahterimakan.</p>
+          </li>
+        </ol>
+
+        <div class="note-bar">
+          <p><em>Harga menyesuaikan kebutuhan & fitur.</em> Konsultasikan dulu, kami bantu carikan solusi terbaik.</p>
+          <a href="#" class="link-accent js-wa">Mulai Konsultasi →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 Portofolio & Testimoni ===== -->
+    <section class="section section--tight-top" id="portofolio">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">04 · Portofolio & Testimoni</span>
+            <h2 class="section__title">Hasil kerja yang <em class="mark">berbicara</em>.</h2>
+          </div>
+          <p class="section__lead">Mereka sudah mempercayakan kebutuhan digitalnya pada kami. Kini saatnya giliran bisnis Anda.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__idx">01 / 03</span>
+            <strong class="stat__value">100%</strong>
+            <span class="stat__label">Custom sesuai kebutuhan</span>
+          </div>
+          <div class="stat">
+            <span class="stat__idx">02 / 03</span>
+            <strong class="stat__value">5 Tahap</strong>
+            <span class="stat__label">Alur kerja yang jelas</span>
+          </div>
+          <div class="stat">
+            <span class="stat__idx">03 / 03</span>
+            <strong class="stat__value">Responsif</strong>
+            <span class="stat__label">Tampil rapi di semua perangkat</span>
+          </div>
+        </div>
+
+        <!-- Portofolio: screenshot & testimoni diisi bertahap -->
+        <div class="testimonials">
+          <article class="card testi">
+            <div class="testi__shot"><span>Screenshot proyek</span></div>
+            <div class="testi__body">
+              <div class="testi__stars"><span class="quote">“</span>★★★★★</div>
+              <p class="testi__text">Testimoni klien akan ditampilkan di sini bersama screenshot proyek yang telah kami kerjakan.</p>
+              <div class="testi__author">
+                <span class="avatar">A</span>
+                <div><strong>Nama Klien</strong><a href="#">namawebsite.com ↗</a></div>
+              </div>
+            </div>
+          </article>
+          <article class="card testi testi--reverse">
+            <div class="testi__shot"><span>Screenshot proyek</span></div>
+            <div class="testi__body">
+              <div class="testi__stars"><span class="quote">“</span>★★★★★</div>
+              <p class="testi__text">Testimoni klien akan ditampilkan di sini bersama screenshot proyek yang telah kami kerjakan.</p>
+              <div class="testi__author">
+                <span class="avatar">B</span>
+                <div><strong>Nama Klien</strong><a href="#">namawebsite.com ↗</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 05 Tentang Kami ===== -->
+    <section class="section section--soft" id="tentang">
+      <div class="container about">
+        <div class="about__text">
+          <span class="eyebrow">05 · Tentang Kami</span>
+          <h2 class="section__title">Partner digital yang <em class="mark">tumbuh bersama</em> bisnis Anda.</h2>
+          <p class="section__lead">Youcanbuild adalah jasa pembuatan website, aplikasi, dan sistem digital. Kami fokus menghadirkan solusi yang modern, cepat, aman, dan benar-benar membantu pekerjaan Anda menjadi lebih efisien.</p>
+          <ul class="bullets">
+            <li>Desain Modern</li>
+            <li>Responsif</li>
+            <li>Aman</li>
+            <li>Berkinerja Tinggi</li>
+          </ul>
+          <a href="#" class="btn btn--primary js-wa">Ngobrol dengan Kami <span class="btn__icon">→</span></a>
+        </div>
+        <div class="about__media">
+          <span class="about__badge">✦ Solusi Digital</span>
+          <div class="about__img"><span>Foto tim / kantor</span></div>
+          <div class="about__float">
+            <span class="about__float-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>
+            </span>
+            <div><strong>Website & Aplikasi</strong><span>Cepat · Aman · Profesional</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 06 Artikel ===== -->
+    <section class="section" id="artikel">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">06 · Artikel</span>
+            <h2 class="section__title">Belajar & <em class="mark">tumbuh</em> di era digital.</h2>
+          </div>
+          <p class="section__lead">Tips, panduan praktis, dan insight seputar website, aplikasi, dan digitalisasi bisnis.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card post">
+            <div class="post__thumb"><span>Gambar artikel</span></div>
+            <div class="post__body">
+              <span class="post__cat">Website</span>
+              <h3>Judul artikel akan tampil di sini</h3>
+              <div class="post__foot"><span>Segera hadir</span><span class="post__arrow">↗</span></div>
+            </div>
+          </article>
+          <article class="card post">
+            <div class="post__thumb"><span>Gambar artikel</span></div>
+            <div class="post__body">
+              <span class="post__cat">Aplikasi</span>
+              <h3>Judul artikel akan tampil di sini</h3>
+              <div class="post__foot"><span>Segera hadir</span><span class="post__arrow">↗</span></div>
+            </div>
+          </article>
+          <article class="card post">
+            <div class="post__thumb"><span>Gambar artikel</span></div>
+            <div class="post__body">
+              <span class="post__cat">Digitalisasi Bisnis</span>
+              <h3>Judul artikel akan tampil di sini</h3>
+              <div class="post__foot"><span>Segera hadir</span><span class="post__arrow">↗</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="center">
+          <a href="#" class="btn btn--outline">Lihat Semua Artikel <span class="btn__icon">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 07 CTA ===== -->
+    <section class="section section--tight-top" id="kontak">
+      <div class="container">
+        <div class="cta">
+          <span class="cta__bignum" aria-hidden="true">07</span>
+          <span class="eyebrow eyebrow--center eyebrow--light">07 · Mulai Hari Ini</span>
+          <h2>Saatnya bisnismu<br /><em class="mark mark--light">naik level</em>.</h2>
+          <p>Wujudkan website, aplikasi, atau sistem yang bekerja untuk bisnis Anda. Mulai dari konsultasi gratis lewat WhatsApp.</p>
+          <div class="cta__actions">
+            <a href="#" class="btn btn--primary js-wa">Mulai Konsultasi <span class="btn__icon">→</span></a>
+            <a href="#alur" class="btn btn--glass">Lihat Alur Kerja</a>
+          </div>
+          <div class="cta__foot">Respon cepat · Konsultasi gratis · Tanpa komitmen</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Strip CTA ===== -->
+  <div class="strip">
+    <div class="container strip__inner">
+      <div>
+        <strong>Siap Punya Website & Aplikasi Tanpa Ribet?</strong>
+        <span>Konsultasikan kebutuhan Anda, kami bantu dari awal sampai online.</span>
+      </div>
+      <a href="#" class="btn btn--white js-wa">Konsultasi Sekarang</a>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/img/logo-white.png" alt="Youcanbuild" width="708" height="140" />
+        <p>Jasa pembuatan website, aplikasi, dan sistem digital untuk bisnis yang ingin bekerja lebih efisien.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 9h4v12H4zM6 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4 6h4v1.7A4.4 4.4 0 0 1 18 9c3 0 4 2 4 5v7h-4v-6c0-1.5-.3-3-2-3s-2 1.4-2 3v6h-4z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Layanan</h4>
+        <a href="#layanan">Website Company Profile</a>
+        <a href="#layanan">Website Toko Online</a>
+        <a href="#layanan">Aplikasi Mobile</a>
+        <a href="#layanan">Sistem Custom</a>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <a href="#desain">Cari Desain</a>
+        <a href="#portofolio">Portofolio</a>
+        <a href="#alur">Alur Kerja</a>
+        <a href="#artikel">Artikel</a>
+      </div>
+      <div>
+        <h4>Hubungi Kami</h4>
+        <p>Youcanbuild</p>
+        <a href="#" class="js-wa">WhatsApp: (segera diisi)</a>
+        <a href="#">Email: (segera diisi)</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> Youcanbuild. All rights reserved.</span>
+      <div><a href="#">Syarat & Ketentuan</a><a href="#">Kebijakan Privasi</a></div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="#" class="wa-float js-wa" aria-label="Chat WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>
+  </a>
+
+  <!-- Ikon bersama -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  </svg>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
