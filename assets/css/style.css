@@ -294,7 +294,29 @@ button { font: inherit; cursor: pointer; }
 .bullets li { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--navy); display: flex; align-items: center; gap: 8px; }
 .bullets li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
 .about__media { position: relative; }
-.about__img { aspect-ratio: 4 / 3.4; border-radius: 28px 28px 80px 28px; }
+.about__img {
+  position: relative; aspect-ratio: 4 / 3.4; border-radius: 28px 28px 80px 28px; overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 70%, var(--red) 0 30%, transparent 30.5%),
+    radial-gradient(circle at 15% 15%, rgba(225,6,0,.12), transparent 45%),
+    linear-gradient(160deg, #fff5f5, #ffe3e3);
+}
+.mock-browser {
+  position: absolute; left: 7%; top: 11%; width: 78%;
+  background: #fff; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 24px 50px -20px rgba(27,42,78,.45); transform: rotate(-2deg);
+}
+.mock-browser__bar { display: flex; align-items: center; gap: 5px; padding: 8px 10px; background: #f3f5f9; border-bottom: 1px solid var(--line); }
+.mock-browser__bar i { width: 8px; height: 8px; border-radius: 50%; background: #d4d9e3; }
+.mock-browser__bar i:first-child { background: var(--red); }
+.mock-browser__bar span { flex: 1; height: 8px; margin-left: 8px; border-radius: 99px; background: #e4e8ef; max-width: 45%; }
+.mock-browser img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; }
+.mock-phone {
+  position: absolute; right: 6%; top: 30%; width: 27%; aspect-ratio: 9 / 18.5;
+  background: #fff; border: 6px solid var(--navy); border-radius: 24px; overflow: hidden;
+  box-shadow: 0 24px 40px -16px rgba(27,42,78,.55); transform: rotate(4deg);
+}
+.mock-phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .about__badge {
   position: absolute; top: -14px; left: -10px; z-index: 2; transform: rotate(-6deg);
   background: var(--red); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
@@ -444,3 +466,4 @@ button { font: inherit; cursor: pointer; }
 .lightbox__thumbs button.is-active { border-color: var(--red); opacity: 1; }
 .lightbox__thumbs img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 body.no-scroll { overflow: hidden; }
+.about__float { right: auto; max-width: 68%; }
