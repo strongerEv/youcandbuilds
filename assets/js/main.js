@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupNavbar();
   setupHeroSlider();
   setupDesignFilter();
+  setupGallery();
   setupReveal();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
@@ -173,6 +174,74 @@ function setupDesignFilter() {
       cards.forEach((card) => card.classList.toggle("is-hidden", f !== "all" && card.dataset.cat !== f));
     })
   );
+}
+
+/* ---------- Galeri tampilan proyek (lightbox) ---------- */
+function setupGallery() {
+  const box = document.getElementById("lightbox");
+  const img = document.getElementById("lbImg");
+  const title = document.getElementById("lbTitle");
+  const count = document.getElementById("lbCount");
+  const thumbs = document.getElementById("lbThumbs");
+  let images = [];
+  let index = 0;
+  let lastFocus = null;
+
+  function show(i) {
+    index = (i + images.length) % images.length;
+    img.src = images[index];
+    img.alt = `${title.textContent} — tampilan ${index + 1}`;
+    count.textContent = `${index + 1} / ${images.length}`;
+    [...thumbs.children].forEach((t, n) => t.classList.toggle("is-active", n === index));
+  }
+
+  function open(trigger) {
+    const slug = trigger.dataset.gallery;
+    const total = Number(trigger.dataset.count) || 1;
+    images = Array.from({ length: total }, (_, i) => `assets/img/karya/${slug}-${i + 1}.webp`);
+    title.textContent = trigger.dataset.title;
+    thumbs.innerHTML = "";
+    images.forEach((src, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", `Tampilan ${i + 1}`);
+      b.innerHTML = `<img src="${src}" alt="" loading="lazy" />`;
+      b.addEventListener("click", () => show(i));
+      thumbs.appendChild(b);
+    });
+    box.querySelectorAll(".lightbox__nav").forEach((n) => (n.hidden = images.length < 2));
+    lastFocus = document.activeElement;
+    box.hidden = false;
+    document.body.classList.add("no-scroll");
+    show(0);
+    box.querySelector(".lightbox__close").focus();
+  }
+
+  function close() {
+    box.hidden = true;
+    document.body.classList.remove("no-scroll");
+    if (lastFocus) lastFocus.focus();
+  }
+
+  document.querySelectorAll(".js-gallery").forEach((el) => el.addEventListener("click", () => open(el)));
+  box.querySelector(".lightbox__close").addEventListener("click", close);
+  box.querySelector(".lightbox__nav--prev").addEventListener("click", () => show(index - 1));
+  box.querySelector(".lightbox__nav--next").addEventListener("click", () => show(index + 1));
+  box.addEventListener("click", (e) => { if (e.target === box) close(); });
+  document.addEventListener("keydown", (e) => {
+    if (box.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowRight") show(index + 1);
+    if (e.key === "ArrowLeft") show(index - 1);
+  });
+
+  // geser di HP
+  let startX = 0;
+  img.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX), { passive: true });
+  img.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) show(index + (dx < 0 ? 1 : -1));
+  });
 }
 
 /* ---------- Animasi muncul saat scroll ---------- */
