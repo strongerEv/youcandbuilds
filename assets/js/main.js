@@ -3,7 +3,7 @@
    ========================================================= */
 
 // Ganti dengan nomor WhatsApp bisnis (format internasional, tanpa "+")
-const WA_NUMBER = "";
+const WA_NUMBER = "6285177421890";
 const WA_MESSAGE = "Halo Youcanbuild, saya ingin konsultasi pembuatan website/aplikasi.";
 
 document.addEventListener("DOMContentLoaded", () => {
