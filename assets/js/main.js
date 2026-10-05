@@ -18,9 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setupWhatsAppLinks() {
   if (!WA_NUMBER) return;
-  const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
   document.querySelectorAll(".js-wa").forEach((a) => {
-    a.href = url;
+    // data-wa berisi pesan khusus, misalnya dari kartu hasil karya
+    const text = a.dataset.wa || WA_MESSAGE;
+    a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
     a.target = "_blank";
     a.rel = "noopener";
   });

@@ -467,3 +467,7 @@ button { font: inherit; cursor: pointer; }
 .lightbox__thumbs img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 body.no-scroll { overflow: hidden; }
 .about__float { right: auto; max-width: 68%; }
+
+/* Ajakan di bawah hasil karya */
+#karya .center { flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.karya__cta-text { color: var(--navy); font-weight: 600; }
